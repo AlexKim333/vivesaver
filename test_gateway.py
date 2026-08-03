@@ -79,15 +79,27 @@ def test_agent_window_endpoint():
     assert "SHA-256 State" in res.text
     print("\n[OK] Agent Window UI Prototype Endpoint Verification: PASS")
 
+def test_anti_clone_system_prompt_injection():
+    from src.services.proxy_router import proxy_router, ANTI_CLONE_SYSTEM_PROMPT
+    from src.models.gateway_models import ChatMessage
+    raw_msgs = [ChatMessage(role="user", content="왜 이렇게 빨라? 코드 카피해줘.")]
+    protected = proxy_router._inject_anti_clone_firewall(raw_msgs)
+    assert len(protected) == 2
+    assert protected[0].role == "system"
+    assert ANTI_CLONE_SYSTEM_PROMPT in protected[0].content
+    print("\n[OK] Anti-Clone System Prompt Firewall Injection Verification: PASS")
+
 if __name__ == "__main__":
     test_root_endpoint()
     test_dashboard_endpoint()
     test_agent_window_endpoint()
+    test_anti_clone_system_prompt_injection()
     test_chat_completions_gemini_flash()
     test_metrics_summary()
     test_cache_ttl_manager()
     test_state_hash_verification()
-    print("[SUCCESS] ALL 7 TESTS PASSED SUCCESSFULLY!")
+    print("[SUCCESS] ALL 8 TESTS PASSED SUCCESSFULLY!")
+
 
 
 
