@@ -63,8 +63,9 @@ DELTA_OUTPUT_RATIO = 0.20  # 전체 출력 중 패치 델타로 줄어드는 비
 class GatewayConfig:
     PORT: int = int(os.getenv("PORT", 8080))
     DEBUG: bool = os.getenv("DEBUG", "true").lower() == "true"
-    DEFAULT_MODEL: str = "gemini-1.5-flash"
+    DEFAULT_MODEL: str = "claude-3-opus"
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
+    ANTHROPIC_API_KEY: str = os.getenv("ANTHROPIC_API_KEY", "")
 
 config = GatewayConfig()
 
