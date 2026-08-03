@@ -204,7 +204,8 @@ DASHBOARD_HTML_TEMPLATE = """
                 <h1>⚡ VibeSaver.ai — 50% 반값 바이브 코딩 에이전트 양판점</h1>
                 <p>AST 시맨틱 델타 압축 & KV 캐시 90% 할인을 통한 토큰 차익(Arbitrage) 실시간 모니터링</p>
             </div>
-            <div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <a href="/agent-window" style="background: linear-gradient(135deg, #00f2fe, #4facfe); color: #0a0d14; padding: 8px 16px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 14px;">🖥️ 에이전트 윈도우 열기</a>
                 <span class="status-badge">
                     <span class="status-dot"></span>
                     VibeSaver Online

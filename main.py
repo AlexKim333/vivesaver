@@ -8,6 +8,7 @@ from src.services.cache_manager import cache_manager
 from src.services.delta_engine import delta_engine
 from src.services.metrics_store import metrics_store
 from src.views.dashboard_html import DASHBOARD_HTML_TEMPLATE
+from src.views.agent_window_html import get_agent_window_html
 
 app = FastAPI(
     title="VibeSaver.ai — 토큰절약형 바이브 코딩 에이전트 양판점 게이트웨이",
@@ -21,9 +22,18 @@ async def root():
         "service": "VibeSaver.ai — Token-Saving Vibe Coding Agent Gateway",
         "status": "online",
         "philosophy": "Zero-Config Vibe Coding with 50% Billed Cost & 3x Speed",
+        "agent_window_url": "/agent-window",
         "dashboard_url": "/dashboard",
         "documentation": "/docs"
     }
+
+
+@app.get("/agent-window", response_class=HTMLResponse)
+async def agent_window_view():
+    """
+    VibeSaver.ai - 50% 반값 바이브 코딩 에이전트 윈도우 UI 프로토타입
+    """
+    return HTMLResponse(content=get_agent_window_html(), status_code=200)
 
 
 @app.get("/dashboard", response_class=HTMLResponse)
@@ -32,6 +42,7 @@ async def dashboard_view():
     실시간 토큰 절약량, 마진율 및 통계 히스토리 시각화 웹 대시보드
     """
     return HTMLResponse(content=DASHBOARD_HTML_TEMPLATE, status_code=200)
+
 
 @app.get("/v1/metrics/summary")
 async def get_metrics_summary():

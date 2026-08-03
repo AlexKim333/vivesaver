@@ -71,14 +71,24 @@ def test_state_hash_verification():
     assert delta_engine.sync_errors_detected >= 1
     print("\n[OK] State Hash Verification & Force Refresh Recovery Verification:", delta_engine.get_sync_status())
 
+def test_agent_window_endpoint():
+    res = client.get("/agent-window")
+    assert res.status_code == 200
+    assert "VibeSaver.ai — 50% 반값 바이브 코딩 에이전트 윈도우" in res.text
+    assert "APPLY DELTA PATCH" in res.text
+    assert "SHA-256 State" in res.text
+    print("\n[OK] Agent Window UI Prototype Endpoint Verification: PASS")
+
 if __name__ == "__main__":
     test_root_endpoint()
     test_dashboard_endpoint()
+    test_agent_window_endpoint()
     test_chat_completions_gemini_flash()
     test_metrics_summary()
     test_cache_ttl_manager()
     test_state_hash_verification()
-    print("[SUCCESS] ALL TESTS PASSED SUCCESSFULLY!")
+    print("[SUCCESS] ALL 7 TESTS PASSED SUCCESSFULLY!")
+
 
 
 
