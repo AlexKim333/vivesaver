@@ -89,16 +89,29 @@ def test_anti_clone_system_prompt_injection():
     assert ANTI_CLONE_SYSTEM_PROMPT in protected[0].content
     print("\n[OK] Anti-Clone System Prompt Firewall Injection Verification: PASS")
 
+def test_local_cli_agent():
+    from src.cli.local_agent import VibeSaverLocalCLI
+    cli = VibeSaverLocalCLI(".")
+    data = cli.connect_repository()
+    assert data["file_count"] >= 1
+    in_sync, modified, _ = cli.check_status()
+    assert in_sync >= 1
+    delta_res = cli.compute_local_delta("old line", "new line")
+    assert "old_tokens" in delta_res and "delta_tokens" in delta_res
+    print("\n[OK] VibeSaver Local Installed CLI Agent Verification: PASS")
+
 if __name__ == "__main__":
     test_root_endpoint()
     test_dashboard_endpoint()
     test_agent_window_endpoint()
     test_anti_clone_system_prompt_injection()
+    test_local_cli_agent()
     test_chat_completions_gemini_flash()
     test_metrics_summary()
     test_cache_ttl_manager()
     test_state_hash_verification()
-    print("[SUCCESS] ALL 8 TESTS PASSED SUCCESSFULLY!")
+    print("[SUCCESS] ALL 9 TESTS PASSED SUCCESSFULLY!")
+
 
 
 

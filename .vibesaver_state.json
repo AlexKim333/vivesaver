@@ -1,0 +1,114 @@
+{
+  "root_dir": "C:\\Users\\tukpa\\OneDrive\\바탕 화면\\토큰절약형 코딩에이전트",
+  "version": "1.0.0-MVP",
+  "file_count": 21,
+  "total_lines": 2501,
+  "total_tokens": 24510,
+  "files": {
+    ".vibesaver_state.json": {
+      "sha256": "eaa2c8dd77527ae5ea6fdf3567fa23271ead9e5b04b97d3df4bf5ed6bea2fd9e",
+      "lines": 109,
+      "tokens": 855
+    },
+    "main.py": {
+      "sha256": "0b54726572ed9618ea7548244d424636236b14acf740b3f5b3c8025af650eae1",
+      "lines": 98,
+      "tokens": 813
+    },
+    "README.md": {
+      "sha256": "291402eedcd3302e7b4b592fffe09b6494e448cd31deddb3800d25379d0c10d7",
+      "lines": 81,
+      "tokens": 989
+    },
+    "test_gateway.py": {
+      "sha256": "ba355aeb69cc433f778756039f6652272f7acc9355da1555560ecffc0948e005",
+      "lines": 120,
+      "tokens": 1109
+    },
+    "src/config.py": {
+      "sha256": "4ff542001da84f5306ab8d490c0b560432a47f7fd283c70f06d9b4e1498bec2a",
+      "lines": 71,
+      "tokens": 554
+    },
+    "src/__init__.py": {
+      "sha256": "19d5a6c3f2aa7ce06f6f9764f97abab392081e0a4d92b6b705c5f3ec66c7b138",
+      "lines": 2,
+      "tokens": 11
+    },
+    "src/cli/local_agent.py": {
+      "sha256": "71dc5077cb3bb40dfab48aa403a00bbe7ba63f71d5ead5a27f81e63154a62b8e",
+      "lines": 230,
+      "tokens": 2229
+    },
+    "src/cli/__init__.py": {
+      "sha256": "5be2130361cff180bdb70e07adf6d2f189cba4b3fa68a9dc80a559e46c3881eb",
+      "lines": 2,
+      "tokens": 13
+    },
+    "src/models/gateway_models.py": {
+      "sha256": "551bcff6956f9c67eca224eb171fbb5c0297bf3166fc0a632e124f7aa83ee12f",
+      "lines": 41,
+      "tokens": 331
+    },
+    "src/models/__init__.py": {
+      "sha256": "ffbee8798796b4e46ba11a47d4ad266c1eecc4878a12bab1124437cc8cba440d",
+      "lines": 2,
+      "tokens": 17
+    },
+    "src/services/cache_manager.py": {
+      "sha256": "8271df1f780f0fb0e2b24510273feb1f6997fdabc1245625ad43d4607331cbbe",
+      "lines": 97,
+      "tokens": 943
+    },
+    "src/services/delta_engine.py": {
+      "sha256": "af2ea070c84e8c7d57046d8c90e800a4b8531f2aa2f746db68f0073f0ac9b785",
+      "lines": 82,
+      "tokens": 795
+    },
+    "src/services/gemini_client.py": {
+      "sha256": "1e41199b6cd02a911ee5bbc0a5b83cbe45d8ff9bd8f07d2b1390b284c0636364",
+      "lines": 62,
+      "tokens": 508
+    },
+    "src/services/metrics_store.py": {
+      "sha256": "3e40a107960f593bec050c8f2279f0ac6b23d3aa072c0a3c48ccaabb01e1d15f",
+      "lines": 71,
+      "tokens": 821
+    },
+    "src/services/proxy_router.py": {
+      "sha256": "fb4fb70e5b82f07f32033884a414cd81402f5a3f5379d10070dc5d19421f9ea3",
+      "lines": 133,
+      "tokens": 1465
+    },
+    "src/services/__init__.py": {
+      "sha256": "e02a0a5fe4f227cb1311543dd45d8194b9687a7c55aadb5dd02d3b573d314f8b",
+      "lines": 2,
+      "tokens": 20
+    },
+    "src/utils/token_estimator.py": {
+      "sha256": "a4f3937332065bfdf83b7166964a5bf594267386c0b3d0203d57d405b3074c11",
+      "lines": 52,
+      "tokens": 582
+    },
+    "src/utils/__init__.py": {
+      "sha256": "612e14e3a4a95fbb083b1e4c421cd3ce0354e07d386d546e1de1d8c2bf2b88ca",
+      "lines": 2,
+      "tokens": 14
+    },
+    "src/views/agent_window_html.py": {
+      "sha256": "b504f3311b97783b0324130b0d2e5b8382fa0afda079685287e11567675c4aa6",
+      "lines": 882,
+      "tokens": 9070
+    },
+    "src/views/dashboard_html.py": {
+      "sha256": "550946a1b8f700445f72b794090e668caf3ed887cc4cb5fde898e810f34bdf34",
+      "lines": 360,
+      "tokens": 3355
+    },
+    "src/views/__init__.py": {
+      "sha256": "3d6a818f43bfe0ad6450155ee2ceb6cd26a491b5cfa0ecc665a13336d58841e0",
+      "lines": 2,
+      "tokens": 16
+    }
+  }
+}
