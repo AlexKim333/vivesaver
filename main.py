@@ -89,6 +89,7 @@ if __name__ == "__main__":
     print("=" * 60)
     print(" 🚀 VibeSaver.ai — 50% 반값 바이브 코딩 에이전트 양판점 게이트웨이 시작")
     print(f" 📡 포트: {config.PORT} | 기본 모델: {config.DEFAULT_MODEL}")
+    print(f" 🖥️ VibeSaver 에이전트 윈도우 UI: http://localhost:{config.PORT}/agent-window")
     print(f" 📊 실시간 모니터링 대시보드: http://localhost:{config.PORT}/dashboard")
     print("=" * 60)
     uvicorn.run("main:app", host="0.0.0.0", port=config.PORT, reload=config.DEBUG)
